@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar-9</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="tailwind.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss"></style>
+  </head>
+  <body>
+    <div class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl md:mt-8">
+      <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl md:text-6xl md:text-center">
+        Responsive <span class="text-sky-500">Design</span>
+      </h3>
+      <img
+        src="./img/y.jpg"
+        alt="my-img"
+        class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center"
+      />
+      <h2
+        class="mt-6 text-2xl font-semibold text-slate-800 sm:text-4xl sm:mt-8"
+      >
+        Mari Belajar Programming Bersama WPU
+      </h2>
+      <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo magnam
+        fugiat omnis, ipsam, ratione minima cum nobis eos nisi temporibus
+        pariatur eius autem suscipit ab ea sit et provident
+      </p>
+      <div class="mt-4 sm:mt-6">
+        <a
+          href="#"
+          class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base"
+          >Subscribe Chanel Youtube</a
+        >
+      </div>
+    </div>
+    <div class="mt-96"></div>
+  </body>
+</html>

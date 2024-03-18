@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar 6</title>
+    <script src="tailwind.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              "spin-slow": "spin 3s linear infinite",
+              goyang: "wiggle 1s ease-in-out infinite",
+              "wave-hand": "wave 1s linear infinite",
+            },
+            keyframes: {
+              wiggle: {
+                "0%, 100%": { transform: "rotate(-3deg)" },
+                "50%": { transform: "rotate(3deg)" },
+              },
+              wave: {
+                "0%": { transform: "rotate(0.0deg)" },
+                "10%": { transform: "rotate(14deg)" },
+                "20%": { transform: "rotate(-8deg)" },
+                "30%": { transform: "rotate(14deg)" },
+                "40%": { transform: "rotate(-4deg)" },
+                "50%": { transform: "rotate(10.0deg)" },
+                "60%": { transform: "rotate(0.0deg)" },
+                "100%": { transform: "rotate(0.0deg)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <h1 class="text-3xl text-center my-3">Transisi, Transform, & Animasi</h1>
+    <h1 class="text-center font-semibold text-emerald-500 text-2xl">
+        Hello <span class="animate-wave-hand inline-block">👋🏻</span>, My Name Zuhril
+    </h1>
+    <div
+      class="w-40 h-40 my-20 mx-auto bg-blue-500 rounded-lg shadow-lg hover:rotate-180 duration-300 hover:bg-pink-500 transition origin-top-left"
+    ></div>
+
+    <div class="w-40 h-40 mx-auto mt-10 group">
+      <div
+        class="w-full h-full rounded-lg shadow-lg bg-green-500 group-hover:rotate-180 origin-top-right transition duration-1000 ease-in-out delay-1000"
+      ></div>
+    </div>
+
+    <div
+      class="w-40 h-40 my-20 mx-auto shadow-lg bg-pink-500 animate-goyang rounded-lg"
+    ></div>
+
+    <div
+      class="w-40 h-40 my-20 mx-auto shadow-inner bg-red-500 animate-bounce rounded-full"
+    ></div>
+  </body>
+</html>

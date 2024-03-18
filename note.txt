@@ -1,0 +1,107 @@
+TAILWINDS CCS = A utility-first css framework that packed with classes
+apa itu utility-first ?
+utility first = yang isinya class2 yang saja yang sudah terdefinisi
+component first = satu komponen memiliki banyak style
+class utility = class yang berfungsi untuk melakukan satu hal saja dengan tugas tertentu
+Adam Wathan dibuat pada tahun 1 nov 2017
+
+utilities : 
+preflight = css reset
+layout
+flexbox & grid
+spacing & sizing
+typography
+background & borders
+effect & filters
+transition, transform, & animation
+pengaturan untuk tables
+
+features :
+interactivity
+responsive design
+dark mode
+reusability
+custom style
+function & directive -> sass
+
+bedanya dengan boostrap
+boostrap = UI framework
+tailwind = Utitlity First Framework
+
+kenapa harus tailwind css ?
+memisahkan style dari struktur
+
+child combinator (>) turunan/anak dari parent element
+
+memisahkan style dari struktur pada element
+BEM (Blocks, Elements and Modifiers)
+
+sintax build
+npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch
+
+sintax minify file css
+npx tailwindcss -o ./public/css/style.min.css --minify
+
+Arbitary value nilai yang bisa disisipkan pada class misal m-[42px] atau p-[10rem] memasukkan nilai yang kita inginkan maka akan dibuatkan class baru tersebut sesuai nilai yang kita tulis tadi misal lagi pada color bg-[#fee355] begitu juga pada class class lainnya
+
+Psuedo Class & Darkmode
+cara melakukan darkmode ada 2 cara yaitu, pertama mulai dari menghidupkan mode darkmode didalam operasi pc dan yang ke-2 yaitu dengan mengconfig pada tailwindcss dengan darkMode: 'class' lalu tulis pada html nya yaitu class="dark"
+
+Transform, Transition, Animation
+Transform : -scale yaitu digunakan untuk memperbesar dan memperkecil ukuran dari suatu element berdasarkan skalanya
+          : -rotate digunakan untuk memutar suatu element
+          : -translate digunakan untuk mengubah posisi atau menggeser element
+          : -skew untuk membuat element miring atau condong
+          : -transform-origin digunakan untuk memutar sbeuah element terhadap sumbunya
+Scale jika < 100 maka mengecil ukurannya jika > 100 maka membesar ukurannya
+Jika ingin membuat custom animasi maka haru membuat keyframes nya terlebih dahulu di extend config nya
+
+layouting
+container ukurannya disesuaikan terhadap lebar dari website kita dan juga responsive
+floats
+
+Responsive design pada tailwindcss dimana awal-awal kita mulai mendesain tampilan pada mobile terlebih dahulu. Baru setelah itu kita tentukan breakpoint yang kita inginkan mulai dari ukuran layarnya, typography nya, warna dll.
+
+display flex dan grid 
+CSS grid
+Sebelum mengetahui cara menggunakan CSS grid, berikut elemen-elemen penting yang perlu kamu ketahui:
+
+Baris (row) dan kolom (column): elemen ini menjadi struktur dasar dari CSS grid. Baris adalah elemen horizontal, sedangkan kolom adalah elemen vertikal. Keduanya bersama-sama membentuk kerangka kerja untuk meletakkan konten.
+Garis (line): garis adalah pembatas antara baris dan kolom. Dengan menentukan nomor garis, kamu bisa menempatkan item di area yang diinginkan.
+Sel (cell): sel adalah ruang antara garis vertikal dan horizontal. Elemen ini berguna sebagai tempat untuk meletakkan konten.
+Area: area adalah ruang yang dibentuk dari beberapa sel, memungkinkan kamu untuk mengelompokkan elemen.
+Gap: gap adalah jarak antara baris dan kolom, memberikan ruang antar elemen.
+Kontainer (container): container adalah elemen utama yang mengandung grid. Di sini, kamu akan mendefinisikan struktur grid.
+Item: item adalah elemen yang ditempatkan di dalam grid.
+
+CSS grid dan Flexbox adalah teknologi layout CSS yang berbeda. Jika CSS grid dapat digunakan untuk layout dua dimensi (baris dan kolom), Flexbox lebih cocok untuk layout satu dimensi (hanya baris atau hanya kolom) saja.
+
+Berikut beberapa properti dalam flexbox CSS yang sering digunakan:
+
+#1 Display
+Display adalah titik awal dai flexbox. Dengan menetapkan value flex atau inline-flex pada properti display suatu elemen, kamu mengubahnya menjadi flex container yang berarti elemen anaknya menjadi flex item.
+
+#2 Flex-direction
+Properti ini menentukan arah di mana flex item diletakkan dalam flex container. Kamu bisa memilih row (value default dari flex-direction) untuk layout horizontal atau column untuk layout vertikal.
+
+Ada juga opsi row-reverse dan column-reverse jika kamu ingin item tersebut ditampilkan dalam urutan terbalik.
+
+#3 Justify-content
+Properti justify-content dipakai untuk menentukan bagaimana flex item harus didistribusikan di sepanjang sumbu utama container. Properti ini berguna untuk penyelarasan dan penyeimbangan ruang antar item.
+
+Value yang bisa diterapkan termasuk flex-start (value default dari justify-content), flex-end, center, space-between, space-around, dan space-evenly.
+
+#4 Align-items
+Jika justify-content bekerja pada main axis, align-items fokus pada cross axis.
+
+Properti ini berguna untuk mengatur posisi item secara vertikal (atau horizontal, tergantung arah flex). Kamu bisa memilih value seperti flex-start  (value default dari align-items), flex-end, center, baseline, atau stretch untuk mengontrol bagaimana item tersebut diselaraskan dan mendistribusikan ruang yang tersedia.
+
+#5 Flex-grow, flex-shrink, dan flex-basis
+Ketiga properti ini bekerja bersama untuk menentukan bagaimana flex item tumbuh dan menyusut relatif terhadap yang lain dalam flex container.
+
+flex-grow mengontrol bagaimana item memanfaatkan ruang tambahan, flex-shrink menentukan bagaimana item berkurang saat ruang terbatas, dan flex-basis menetapkan ukuran dasar item sebelum mendistribusikan ruang tambahan.
+
+Belajar function & Directive
+setiap kita menggunakan tailwind via cli apalagi menggunakan bg-[url('../img/image')] maka path harus di awasi root nya dari file output css compile di dalam folder css untuk menampilkan bg-image dengan abitary value
+
+function directive theme() jika kita gunakan maka akan langsung memanggil nilai utilities custom didalam config theme tailwindcss

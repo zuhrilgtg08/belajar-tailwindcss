@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar-5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="tailwind.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle{
+        @apply translate-x-3;
+      }
+    </style>
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="text-3xl font-semibold text-center my-12 font-inter">
+      Psuedo Class dan Dark Mode
+    </h1>
+
+    <div class="flex justify-center">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input type="checkbox" id="toggle" class="hidden"/>
+      <label for="toggle">
+        <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <div class="max-w-2xl h-[400px] mx-auto bg-sky-500 flex rounded-md dark:bg-slate-300 mt-4">
+      <button
+        class="m-auto block bg-green-500 px-10 py-2 rounded-full text-white font-inter font-semibold hover:bg-indigo-500 active:ring active:ring-indigo-400 focus:shadow-xl dark:bg-slate-600 dark:text-white dark:hover:bg-slate-900 dark:active:ring-white dark:focus:shadow-slate-300"
+      >
+        Save
+      </button>
+
+      <div
+        class="m-auto w-1/2 border border-slate-300 shadow-md p-5 rounded-md hover:bg-teal-500 group dark:bg-slate-500 dark:hover:bg-slate-900"
+      >
+        <h5
+          class="text-slate-300 mb-3 font-bold text-lg dark:group-hover:text-white font-inter dark:text-slate-200"
+        >
+          My project
+        </h5>
+        <p
+          class="text-gray-600 dark:group-hover:text-white dark:selection:bg-slate-400 selection:text-slate-900 font-serif first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:float-left first-letter:mr-2 dark:text-slate-200 dark:first-letter:text-slate-400"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+          illum voluptate optio tempora repellat consequuntur cupiditate quae
+          modi dolores. Velit, omnis inventore! Delectus veniam officiis
+          ducimus, a voluptates earum doloremque.
+        </p>
+      </div>
+    </div>
+    <div
+        class="mx-auto my-10 max-w-lg border border-slate-300 shadow-lg p-5 rounded-xl
+        dark:bg-slate-100"
+      >
+      <form action="">
+        <label for="email" class="block">
+            <span class="mb-1 block font-semibold text-slate-700 after:content-['*'] after:text-red-600 after:ml-1">Email Address</span>
+            <input type="email" id="email" placeholder="Masukan Email" 
+            class="px-3 py-2 text-gray-500 border dark:border-slate-500 shadow rounded-md w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-red-600 invalid:focus:border-red-600 invalid:focus:ring-red-600 peer"/>
+            <p class="text-sm m-1 text-red-600 invisible peer-invalid:visible">Email Tidak Valid!</p>
+        </label>
+      </form>
+      </div>
+
+      <script>
+            const checkbox = document.querySelector('#toggle');
+            const html = document.querySelector('html');
+
+            checkbox.addEventListener('click', function() {
+              checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+            });
+      </script>
+  </body>
+</html>

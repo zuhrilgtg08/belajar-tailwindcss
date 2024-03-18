@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="tailwind.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily: {
+                'inter' : ['Inter']
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss"></style>
+  </head>
+  <body>
+    <h1 class="text-center font-bold m-12 text-7xl
+    bg-gradient-to-r from-indigo-700 via-green-500 to-teal-600 bg-clip-text text-transparent">Belajar TailwindCSS</h1>
+
+    <section class="mb-10"> 
+      <h2 class="text-center font-bold text-5xl bg-gradient-to-bl from-emerald-500 via-amber-500 to-lime-500 bg-clip-text text-transparent">Spacing</h2>
+      <div class="mx-auto my-7 bg-blue-600 uppercase text-white text-center w-1/2 h-16 rounded-md px-5 py-5">Margin</div>
+      <div class="px-5 py-5 text-center bg-gradient-to-tl from-red-600 via-indigo-500 to-emerald-400 text-2xl font-inter font-bold text-white">Padding</div>
+    </section>
+
+    <section class="mb-10">
+      <h2>Sizing</h2>
+      <div class="w-32 h-32 mb-12">Kotak 1</div>
+      <div class="max-w-xs h-32">Kotak 2</div>
+    </section>
+
+    <section class="mb-96 max-w-3xl mx-auto font-inter">
+      <h2 class="mb-2 text-4xl font-bold">Belajar Typography pada TailwindCSS</h2>
+      <div class="mb-3 text-lg text-gray-500">By Ahmad Zuhril 2 Januari, 2023</div>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio amet
+        saepe doloremque animi at deserunt enim, vero alias laudantium non, iste
+        odio eos vel officiis! Inventore maiores eos, voluptatibus at ad quidem
+        id cupiditate, esse aliquid itaque culpa tenetur sed facere magnam.
+        Consectetur, nostrum magnam ducimus nam velit nihil iusto?
+      </p>
+      <blockquote class="mb-4 italic font-thin text-xl">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vel
+        consequatur quos corporis dignissimos cum, dicta iste quisquam molestiae
+        illo."
+      </blockquote>
+      <p class="mb-4 font-semibold underline text-red-400">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+        provident aspernatur? Iure pariatur, blanditiis explicabo <a href="#" class="text-base text-blue-600 italic">commodi</a>
+        nostrum id nesciunt ipsam dolorem numquam sunt nulla dignissimos tenetur
+        aperiam deserunt dolor eligendi!
+      </p>
+    </section>
+  </body>
+</html>
